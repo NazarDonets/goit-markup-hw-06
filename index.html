@@ -479,8 +479,98 @@
             <use href="./icons/icons.svg#icon-close"></use>
           </svg>
         </button>
+        <form class="contact-us-form">
+          <h2 class="form-heading">Оставьте свои данные, мы вам перезвоним</h2>
+          <div class="input-fieldset">
+            <input
+              required
+              class="input-field"
+              type="text"
+              name="user-name"
+              id="username"
+              placeholder=" "
+            />
+            <label class="input-label" for="username">Имя</label>
+            <span class="input-icon">
+              <svg height="18" width="18">
+                <use href="./icons/icons.svg#icon-input-name"></use>
+              </svg>
+            </span>
+          </div>
+          <div class="input-fieldset">
+            <input
+              required
+              class="input-field"
+              type="tel"
+              name="user-phone"
+              id="phone"
+              placeholder=" "
+            />
+            <label class="input-label" for="username">Телефон</label>
+            <span class="input-icon">
+              <svg height="18" width="18">
+                <use href="./icons/icons.svg#icon-input-phone"></use>
+              </svg>
+            </span>
+          </div>
+          <div class="input-fieldset">
+            <input
+              required
+              class="input-field"
+              type="email"
+              name="user-email"
+              id="email"
+              placeholder=" "
+            />
+            <label class="input-label" for="username">Почта</label>
+            <span class="input-icon">
+              <svg height="18" width="18">
+                <use href="./icons/icons.svg#icon-input-email"></use>
+              </svg>
+            </span>
+          </div>
+          <div class="input-fieldset">
+            <textarea
+              required
+              class="input-field"
+              name="user-comment"
+              id="comment"
+              placeholder="Введите текст"
+            ></textarea>
+            <label class="input-label-textarea" for="username"
+              >Комментарий</label
+            >
+          </div>
+          <div class="input-checkbox-fieldset">
+            <input
+              class="input-checkbox"
+              type="checkbox"
+              name="terms-agreement"
+              id="terms"
+              value="true"
+            />
+            <label class="input-checkbox-label" for="terms"
+              >Соглашаюсь с рассылкой и принимаю&nbsp
+              <a href="">Условия договора</a></label
+            >
+          </div>
+          <button class="submit-button" type="submit">Отправить</button>
+        </form>
       </div>
     </div>
     <script src="./js/modal.js"></script>
+    <script>
+      (() => {
+        document
+          .querySelector(".contact-us-form")
+          .addEventListener("submit", (e) => {
+            e.preventDefault();
+
+            new FormData(e.currentTarget).forEach((value, name) =>
+              console.log(`${name}: ${value}`)
+            );
+          });
+      })();
+    </script>
   </body>
 </html>
