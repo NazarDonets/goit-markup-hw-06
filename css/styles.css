@@ -214,7 +214,8 @@ p {
 }
 
 .hero-button,
-.submit-button {
+.submit-button,
+.newsletter-submit-button {
   margin-top: 30px;
   width: 200px;
   height: 50px;
@@ -235,7 +236,9 @@ p {
 .hero-button:hover,
 .hero-button:focus,
 .submit-button:hover,
-.submit-button:focus {
+.submit-button:focus,
+.newsletter-submit-button:hover,
+.newsletter-submit-button:focus {
   background-color: var(--white);
   color: var(--brand-color);
 }
@@ -726,6 +729,45 @@ textarea:focus-within + .input-label-textarea {
 
 .input-checkbox-label > a {
   color: var(--brand-color);
+}
+
+.footer-newsletter {
+  margin-left: auto;
+}
+
+.newsletter-form {
+  width: 570px;
+}
+
+.footer-input-row {
+  display: flex;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.newsletter-input-field {
+  width: 358px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  background-color: transparent;
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.6);
+  padding: 15px 16px;
+}
+
+.newsletter-submit-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0;
+  margin-left: 12px;
+}
+
+.subscribe-icon {
+  margin-left: 10px;
 }
 
 /* UTILITES */
